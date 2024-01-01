@@ -1,0 +1,36 @@
+Verilog Checker Report:
+
+Arithmetic Overflow Warnings:
+Module: MultipleDrivers, Line: 178, Expression:         myReg = myReg + 1;                  
+Module: ArithmeticOverflow, Line: 196, Expression:         k = a + b;              
+Module: ArithmeticOverflow, Line: 197, Expression:         result = a + b;         
+
+Unreachable Block Warnings:
+Module: UnreachableBlocks, Line: 28, Expression:             if (1'b1) begin             
+Module: UnreachableBlocks, Line: 35, Expression:             if (1'b0) begin            
+Module: UnreachableBlocks, Line: 46, Expression:             if (1'b0) begin              
+Module: UnreachableBlocks, Line: 56, Expression:             case(x)                         
+
+Uninitialized Register Warnings:
+Module: UninitializedRegister, Line: 73, Expression:     reg data; 
+Module: InferringLatches, Line: 82, Expression:     reg [1:0] x, y;
+Module: NonFullCase, Line: 121, Expression:     reg [1:0] x, y;
+Module: NonFullCase, Line: 122, Expression:     reg [1:0] x1, x2;
+Module: NonParallelCase, Line: 151, Expression:     reg [1:0] x, y;
+
+Non Full Case Warnings:
+Module: UnreachableBlocks, Line: 50, Expression:             case(x)
+Module: InferringLatches, Line: 93, Expression:         case(x)                     
+Module: NonFullCase, Line: 126, Expression:         case(x)                 
+
+Non Parallel Case Warnings:
+Module: NonParallelCase, Line: 155, Expression:         case(x)                 
+
+Multi-Driven Register Warnings:
+Module: MultipleDrivers, Line: 178, Expression:         myReg = myReg + 1;                  
+
+Latch Inference Warnings:
+Module: UnreachableBlocks, Line: 14, Expression:         always @(*)
+Module: InferringLatches, Line: 85, Expression:     always @(enable) 
+Module: InferringLatches, Line: 91, Expression:  always @(enable) 
+Module: NonFullCase, Line: 124, Expression:     always @(*) 
